@@ -1,0 +1,55 @@
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+.core {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+.core::placeholder {
+    color: var(--placeholder, #6B7A90);
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+.core:disabled {
+    cursor: default;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .core:disabled {
+        color: var(--disabled, rgba(0, 0, 0, 0.26));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .core:disabled {
+        color: var(--disabled, rgba(255, 255, 255, 0.3));
+    }
+}
+
+/*noinspection CssInvalidHtmlTagReference*/
+.core:active, .core:focus {
+    border: none;
+}
+
+/*noinspection CssInvalidHtmlTagReference*/
+.core::-webkit-inner-spin-button,
+.core::-webkit-outer-spin-button,
+.core::-webkit-clear-button,
+.core::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*noinspection CssInvalidHtmlTagReference*/
+.core[type=number] {
+    -moz-appearance: textfield;
+}

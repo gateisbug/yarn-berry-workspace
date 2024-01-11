@@ -1,0 +1,53 @@
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction,CssInvalidHtmlTagReference*/
+.core {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: text;
+
+    border-radius: var(--radius, 0.25rem);
+    padding: var(--padding, 0.75rem 1rem);
+}
+
+.core:not(:has(input:disabled)):has(input:hover), .core:not(:has(textarea:disabled)):has(textarea:hover) {
+    border-width: 0.125rem;
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+.core:has(input:focus), .core:has(textarea:focus) {
+    border-width: 0.125rem;
+    border-color: var(--primary, #ffb74d);
+}
+
+.core:has(input:disabled), .core:has(textarea:disabled) {
+    cursor: default;
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidHtmlTagReference*/
+.core:has(.core:invalid) {
+    border-width: 0.125rem;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .core {
+        border: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
+    }
+    .core:has(.core:invalid) {
+        border-color: var(--invalid, #d32f2f);
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .core {
+        border: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
+    }
+    .core:has(.core:invalid) {
+        border-color: var(--invalid, #f44336);
+    }
+}

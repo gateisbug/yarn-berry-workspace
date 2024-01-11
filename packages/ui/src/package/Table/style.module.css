@@ -1,0 +1,26 @@
+/*noinspection CssUnresolvedCustomProperty*/
+.table {
+    border-spacing: var(--spacing, 0);
+    border-collapse: collapse;
+}
+
+.head {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.body {
+    box-sizing: border-box;
+    width: 100%;
+}
+/*noinspection CssUnresolvedCustomProperty*/
+.row {
+    width: 100%;
+}
+.th {
+    font-weight: 700;
+    padding: 0;
+}
+.td {
+    padding: 0;
+}

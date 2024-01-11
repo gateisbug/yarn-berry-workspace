@@ -1,0 +1,71 @@
+.box {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 0.25rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.box:has(input:disabled) {
+    cursor: default;
+}
+
+.root {
+    display: none;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.mark {
+    position: relative;
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mark > svg {
+    user-select: none;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+}
+.mark > svg:first-of-type {
+    transform: scale(1);
+}
+.mark > svg:last-of-type {
+    transform: scale(0);
+    position: absolute;
+    left: 0;
+    transition: transform 150ms cubic-bezier(0.4, 0, 1, 1) 0ms;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .mark {
+        color: var(--default, rgba(0, 0, 0, 0.6));
+    }
+    .root:disabled + .mark {
+        color: var(--disabled, rgba(0, 0, 0, 0.26));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .mark {
+        color: var(--default, rgba(255, 255, 255, 0.7));
+    }
+    .root:disabled + .mark {
+        color: var(--disabled, rgba(255, 255, 255, 0.3));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.root:not(:disabled):checked + .mark {
+    color: var(--primary, #ffb74d);
+}
+
+.root:not(:disabled):checked + .mark > svg:last-of-type {
+    transform: scale(1);
+}

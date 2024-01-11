@@ -1,4 +1,50 @@
 {
   "name": "@untitled/ui",
-  "packageManager": "yarn@4.0.2"
+  "version": "1.0.2-alpha",
+  "description": "A simple, practical and general-purpose React component library.",
+  "keywords": [
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://github.com/gateisbug/practx-ui/tree/main",
+  "repository": "https://github.com/gateisbug/practx-ui.git",
+  "bugs": {
+    "url": "https://github.com/gateisbug/practx-ui/issues",
+    "email": "luftwaffe04@naver.com"
+  },
+  "author": "gateisbug <luftwaffe04@naver.com> (https://github.com/gateisbug)",
+  "license": "(MIT or Apache-2.0)",
+  "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "build-tsc": "rm -rf ./dist && tsc",
+    "build": "rm -rf ./dist && rollup -c --bundleConfigAsCjs",
+    "watch": "rollup -c -w --bundleConfigAsCjs"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "browserslist": [
+    "defaults and fully supports es6-module",
+    "partially supports css-grid"
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.36",
+    "@types/react-dom": "^18.2.14",
+    "typescript": "^5.2.2"
+  }
 }

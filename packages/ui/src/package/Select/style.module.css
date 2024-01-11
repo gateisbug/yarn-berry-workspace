@@ -1,0 +1,57 @@
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+.form[data-open=false] {
+    & > .box {
+        display: none;
+    }
+}
+
+.form[data-open=true] {
+    & > .box {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.box {
+    position: absolute;
+
+    top: var(--top, calc(100% + 0.125rem));
+    left: var(--left, 0);
+    right: var(--right, 0);
+
+    border-radius: var(--radius, 0.25rem);
+    z-index: 1;
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.field {
+    padding: var(--padding, 0.25rem 0.5rem);
+    border-radius: var(--radius, 0.25rem);
+}
+
+/*noinspection CssUnresolvedCustomProperty,CssInvalidFunction*/
+.placeholder {
+    color: var(--placeholder, #666);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .box, .field {
+        background-color: var(--surface, #f1f1f2);
+        border: 0.0625rem solid var(--border, rgba(0, 0, 0, 0.23));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .box, .field {
+        background-color: var(--surface, #242424);
+        border: 0.0625rem solid var(--border, rgba(255, 255, 255, 0.23));
+    }
+}

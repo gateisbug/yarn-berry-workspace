@@ -1,0 +1,63 @@
+.box {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    gap: 0.25rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.box:has(input:disabled) {
+    cursor: default;
+}
+
+.root {
+    display: none;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.mark {
+    display: inline-block;
+    width: var(--width, 1.5rem);
+    height: var(--height, 1.5rem);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .mark {
+        color: var(--default, rgba(0, 0, 0, 0.6));
+    }
+    .root:disabled + .mark {
+        color: var(--disabled, rgba(0, 0, 0, 0.26));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .mark {
+        color: var(--default, rgba(255, 255, 255, 0.7));
+    }
+    .root:disabled + .mark {
+        color: var(--disabled, rgba(255, 255, 255, 0.3));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+.root:not(:disabled):checked + .mark {
+    color: var(--primary, #ffb74d);
+}
+
+/*noinspection CssUnknownProperty*/
+.root:not(:checked) + .mark path {
+    d: path('M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z');
+}
+
+/*noinspection CssUnknownProperty*/
+.root:checked + .mark path {
+    d: path('M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z');
+}
+
+/*noinspection CssUnknownProperty*/
+.root:checked + .mark[data-multiple=true] path {
+    d: path('M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z');
+}

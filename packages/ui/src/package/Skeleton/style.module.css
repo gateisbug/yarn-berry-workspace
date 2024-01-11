@@ -1,0 +1,50 @@
+/*noinspection CssUnresolvedCustomProperty*/
+.core {
+    display: block;
+    min-height: 1rem;
+    animation: animation-skeleton 2s ease-in-out 0.5s infinite;
+}
+
+.core:empty::before {
+    display: inline-block;
+    content: " ";
+    min-height: 1rem;
+}
+
+.core[data-vx='text'] {
+    border-radius: 0.25rem;
+    transform-origin: 0 55%;
+    transform: scale(1, 0.6);
+}
+.core[data-vx='circle'] {
+    border-radius: 50%;
+}
+.core[data-vx='paragraph'] {
+    border-radius: 0.25rem;
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: light) {
+    .core {
+        background-color: var(--surface, rgba(0, 0, 0, 0.11));
+    }
+}
+
+/*noinspection CssUnresolvedCustomProperty*/
+@media (prefers-color-scheme: dark) {
+    .core {
+        background-color: var(--surface, rgba(255, 255, 255, 0.13));
+    }
+}
+
+@keyframes animation-skeleton {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
