@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+
     "target": "ES2015",
     "useDefineForClassFields": true,
     "lib": ["ES2015", "DOM", "DOM.Iterable", "ScriptHost"],
@@ -22,9 +25,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
   },
+  "include": ["client/**/*", "packages/ui", "packages/util"],
   "references": [
-    {
-      "path": "./client"
-    }
+    { "path": "./client" },
+    { "path": "./packages/ui" },
+    { "path": "./packages/util" }
   ]
 }

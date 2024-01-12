@@ -4,12 +4,16 @@
   "version": "1.0.0",
   "workspaces": [
     "client",
-    "packages/*"
+    "packages/ui",
+    "packages/util"
   ],
+  "license": "MIT",
   "scripts": {
     "client": "yarn workspace @untitled/client",
     "ui": "yarn workspace @untitled/ui",
-    "util": "yarn workspace @untitled/util"
+    "util": "yarn workspace @untitled/util",
+    "dev": "yarn client dev",
+    "prepack": "yarn ui build"
   },
   "dependencies": {
     "react": "^18.2.0",

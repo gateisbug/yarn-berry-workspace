@@ -1,6 +1,6 @@
-import React from 'react';
 import { combineClass } from '@util';
 import { ItemProps } from '../types';
+import { MouseEvent } from 'react';
 
 export default function Item({
   multiple = false,
@@ -11,7 +11,7 @@ export default function Item({
   onClick,
   ...props
 }: ItemProps) {
-  const _onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const _onClick = (e: MouseEvent<HTMLDivElement>) => {
     if (value !== undefined && setValue !== undefined) {
       if (Array.isArray(value)) {
         setValue(value);

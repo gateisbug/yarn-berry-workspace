@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import styles from './style.module.css';
 import { combineClass } from '@util';
 import { BadgeProps } from './types';

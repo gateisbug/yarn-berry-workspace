@@ -1,4 +1,4 @@
-import React, { MouseEvent, useRef } from 'react';
+import { MouseEvent, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './style.module.css';
 import { combineClass } from '@util';

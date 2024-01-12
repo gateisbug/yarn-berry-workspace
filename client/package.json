@@ -11,6 +11,7 @@
   },
   "packageManager": "yarn@4.0.2",
   "dependencies": {
+    "@untitled/ui": "file:../packages/ui",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

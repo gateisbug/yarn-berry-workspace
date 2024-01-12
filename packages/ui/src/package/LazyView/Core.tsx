@@ -1,4 +1,3 @@
-import React from 'react';
 import { combineClass } from '@util';
 import { LazyViewProps } from './types';
 import useIntersectionObserver from './useIntersectionObserver';

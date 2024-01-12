@@ -1,7 +1,7 @@
-import React from 'react';
 import styles from '../style.module.css';
 import { combineClass } from '@util';
 import { FormProps, SelectValueType } from '../types';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Form({
   children,
@@ -10,13 +10,13 @@ export default function Form({
   ...props
 }: FormProps) {
   // noinspection TypeScriptValidateTypes
-  const formRef = React.useRef<HTMLDivElement>(null);
-  const openState = React.useState(false);
-  const valueState = React.useState<SelectValueType>([]);
+  const formRef = useRef<HTMLDivElement>(null);
+  const openState = useState(false);
+  const valueState = useState<SelectValueType>([]);
 
   const render = children ? children(openState[1], valueState) : null;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const clickAway = (event: MouseEvent) => {
       if (
         formRef.current &&
@@ -32,7 +32,7 @@ export default function Form({
     };
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     onChange && onChange(valueState[0]);
   }, [valueState[0]]);
 
