@@ -1,4 +1,5 @@
 // noinspection NodeCoreCodingAssistance
+
 import typescript from '@rollup/plugin-typescript';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -37,7 +38,7 @@ export default {
       babelHelpers: 'bundled',
       exclude: ['.yarn/**', 'dist'],
       presets: [
-        '@babel/preset-typescript',
+        // '@babel/preset-typescript',
         '@babel/preset-env',
         '@babel/preset-react'
       ],

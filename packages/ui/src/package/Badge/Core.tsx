@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
 import styles from './style.module.css';
 import { combineClass } from '@util';
+import {  } from '@untitled/util';
 import { BadgeProps } from './types';
 
 export default function Badge({

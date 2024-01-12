@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-//    "rootDir": "./src",
+    "rootDir": "./src",
 
     /* Bundler mode */
     "moduleResolution": "node",

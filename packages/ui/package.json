@@ -30,6 +30,7 @@
     "partially supports css-grid"
   ],
   "dependencies": {
+    "@untitled/util": "file:../util",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

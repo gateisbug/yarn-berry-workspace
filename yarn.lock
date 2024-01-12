@@ -3468,11 +3468,12 @@ __metadata:
 
 "@untitled/ui@file:../packages/ui::locator=%40untitled%2Fclient%40workspace%3Aclient":
   version: 1.0.2-alpha
-  resolution: "@untitled/ui@file:../packages/ui#../packages/ui::hash=2dc0bf&locator=%40untitled%2Fclient%40workspace%3Aclient"
+  resolution: "@untitled/ui@file:../packages/ui#../packages/ui::hash=00a16b&locator=%40untitled%2Fclient%40workspace%3Aclient"
   dependencies:
+    "@untitled/util": "file:../util"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-  checksum: ee9af22d9dcc0c49c9b955562c0dbe92bb2a9b9de87b7a06617e54167747fff1b563c543d700d3562a75b720c46d34052a968a6c38451405e07c8c7de10b7d25
+  checksum: 710ae206f45279c9c21cf5ee43f2ff224e09bd2c531b8ab47e7d95a248c571663d166e66c29bed988343591aed182e4fc52dad1a49040513a5ad4ef096258985
   languageName: node
   linkType: hard
 
@@ -3494,6 +3495,7 @@ __metadata:
     "@types/node": "npm:^20.9.0"
     "@types/react": "npm:^18.2.36"
     "@types/react-dom": "npm:^18.2.14"
+    "@untitled/util": "file:../util"
     autoprefixer: "npm:^10.4.16"
     postcss: "npm:^8.4.31"
     postcss-cli: "npm:^10.1.0"
@@ -3507,6 +3509,26 @@ __metadata:
     typescript: "npm:^5.2.2"
   languageName: unknown
   linkType: soft
+
+"@untitled/util@file:../util::locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D00a16b%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient":
+  version: 0.1.0
+  resolution: "@untitled/util@file:../util#../util::hash=d496c7&locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D00a16b%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient"
+  dependencies:
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+  checksum: 8ce4c4933a3168fb3c193dc6a85c8feb604a926595ce8e67c3c0382c07dcd07fafaf6cec5d91dc953c2622f983ee4e6f4ef32d850f271845a99a492fcee3bdb7
+  languageName: node
+  linkType: hard
+
+"@untitled/util@file:../util::locator=%40untitled%2Fui%40workspace%3Apackages%2Fui":
+  version: 0.1.0
+  resolution: "@untitled/util@file:../util#../util::hash=d496c7&locator=%40untitled%2Fui%40workspace%3Apackages%2Fui"
+  dependencies:
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+  checksum: 8ce4c4933a3168fb3c193dc6a85c8feb604a926595ce8e67c3c0382c07dcd07fafaf6cec5d91dc953c2622f983ee4e6f4ef32d850f271845a99a492fcee3bdb7
+  languageName: node
+  linkType: hard
 
 "@untitled/util@workspace:packages/util":
   version: 0.0.0-use.local

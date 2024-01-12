@@ -13,7 +13,9 @@
     "ui": "yarn workspace @untitled/ui",
     "util": "yarn workspace @untitled/util",
     "dev": "yarn client dev",
-    "prepack": "yarn util build && yarn ui build"
+    "prepack": "yarn util build && yarn ui build",
+    "prestart": "yarn prepack",
+    "start": "yarn client dev"
   },
   "dependencies": {
     "react": "^18.2.0",
