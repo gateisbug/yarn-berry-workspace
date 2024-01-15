@@ -1,5 +1,5 @@
 import styles from '../style.module.css';
-import { combineClass } from '@util';
+import { combineClass } from '@untitled/util';
 import { FormProps, SelectValueType } from '../types';
 import { useEffect, useRef, useState } from 'react';
 

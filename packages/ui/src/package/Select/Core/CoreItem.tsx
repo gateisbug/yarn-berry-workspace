@@ -1,4 +1,4 @@
-import { combineClass } from '@util';
+import { combineClass } from '@untitled/util';
 import { ItemProps } from '../types';
 import { MouseEvent } from 'react';
 

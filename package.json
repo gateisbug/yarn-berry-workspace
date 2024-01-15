@@ -5,7 +5,8 @@
   "workspaces": [
     "client",
     "packages/ui",
-    "packages/util"
+    "packages/util",
+    "packages/*"
   ],
   "license": "MIT",
   "scripts": {

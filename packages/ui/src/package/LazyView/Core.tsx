@@ -1,4 +1,4 @@
-import { combineClass } from '@util';
+import { combineClass } from '@untitled/util';
 import { LazyViewProps } from './types';
 import useIntersectionObserver from './useIntersectionObserver';
 

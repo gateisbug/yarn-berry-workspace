@@ -3468,12 +3468,12 @@ __metadata:
 
 "@untitled/ui@file:../packages/ui::locator=%40untitled%2Fclient%40workspace%3Aclient":
   version: 1.0.2-alpha
-  resolution: "@untitled/ui@file:../packages/ui#../packages/ui::hash=00a16b&locator=%40untitled%2Fclient%40workspace%3Aclient"
+  resolution: "@untitled/ui@file:../packages/ui#../packages/ui::hash=7651cf&locator=%40untitled%2Fclient%40workspace%3Aclient"
   dependencies:
     "@untitled/util": "file:../util"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-  checksum: 710ae206f45279c9c21cf5ee43f2ff224e09bd2c531b8ab47e7d95a248c571663d166e66c29bed988343591aed182e4fc52dad1a49040513a5ad4ef096258985
+  checksum: 534f5d410f2d62e667c31306ee1954b7626666ba2ed1aa5198f03acd91231678de8a9a67680223cdd98cfeda386d7acc68bc112b516b83a9d14fff2d42adaa4f
   languageName: node
   linkType: hard
 
@@ -3503,6 +3503,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     rollup: "npm:^4.3.0"
+    rollup-plugin-dts: "npm:^6.1.0"
     rollup-plugin-postcss: "npm:^4.0.2"
     rollup-plugin-swc3: "npm:^0.10.3"
     tslib: "npm:^2.6.2"
@@ -3510,23 +3511,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@untitled/util@file:../util::locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D00a16b%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient":
+"@untitled/util@file:../util::locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D7651cf%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient":
   version: 0.1.0
-  resolution: "@untitled/util@file:../util#../util::hash=d496c7&locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D00a16b%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient"
+  resolution: "@untitled/util@file:../util#../util::hash=7b29f3&locator=%40untitled%2Fui%40file%3A..%2Fpackages%2Fui%23..%2Fpackages%2Fui%3A%3Ahash%3D7651cf%26locator%3D%2540untitled%252Fclient%2540workspace%253Aclient"
   dependencies:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-  checksum: 8ce4c4933a3168fb3c193dc6a85c8feb604a926595ce8e67c3c0382c07dcd07fafaf6cec5d91dc953c2622f983ee4e6f4ef32d850f271845a99a492fcee3bdb7
+  checksum: b757e87b6a7977e711c5336b47a80cac24e0d6239319939da8f139a38c37c56264655a3d75e9d1e2a019622630a4fddbcdf85341c69e8f61f45760c7d40d234d
   languageName: node
   linkType: hard
 
 "@untitled/util@file:../util::locator=%40untitled%2Fui%40workspace%3Apackages%2Fui":
   version: 0.1.0
-  resolution: "@untitled/util@file:../util#../util::hash=d496c7&locator=%40untitled%2Fui%40workspace%3Apackages%2Fui"
+  resolution: "@untitled/util@file:../util#../util::hash=7b29f3&locator=%40untitled%2Fui%40workspace%3Apackages%2Fui"
   dependencies:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-  checksum: 8ce4c4933a3168fb3c193dc6a85c8feb604a926595ce8e67c3c0382c07dcd07fafaf6cec5d91dc953c2622f983ee4e6f4ef32d850f271845a99a492fcee3bdb7
+  checksum: b757e87b6a7977e711c5336b47a80cac24e0d6239319939da8f139a38c37c56264655a3d75e9d1e2a019622630a4fddbcdf85341c69e8f61f45760c7d40d234d
   languageName: node
   linkType: hard
 
@@ -3557,6 +3558,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     rollup: "npm:^4.9.1"
+    rollup-plugin-dts: "npm:^6.1.0"
     rollup-plugin-swc3: "npm:^0.11.0"
     ts-jest: "npm:^29.1.1"
     tslib: "npm:^2.6.2"
@@ -7758,7 +7760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.30.3, magic-string@npm:^0.30.5":
+"magic-string@npm:^0.30.3, magic-string@npm:^0.30.4, magic-string@npm:^0.30.5":
   version: 0.30.5
   resolution: "magic-string@npm:0.30.5"
   dependencies:
@@ -9794,6 +9796,22 @@ __metadata:
   bin:
     rimraf: bin.js
   checksum: 9cb7757acb489bd83757ba1a274ab545eafd75598a9d817e0c3f8b164238dd90eba50d6b848bd4dcc5f3040912e882dc7ba71653e35af660d77b25c381d402e8
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-dts@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "rollup-plugin-dts@npm:6.1.0"
+  dependencies:
+    "@babel/code-frame": "npm:^7.22.13"
+    magic-string: "npm:^0.30.4"
+  peerDependencies:
+    rollup: ^3.29.4 || ^4
+    typescript: ^4.5 || ^5.0
+  dependenciesMeta:
+    "@babel/code-frame":
+      optional: true
+  checksum: 8fed9f292fec09a21fdac86964aee92f6d76cfa688faa7f47065a1b25e12be209d437329868d706f8a189c246b5e918efc6046eb09cd974cc7989e68fe746927
   languageName: node
   linkType: hard
 

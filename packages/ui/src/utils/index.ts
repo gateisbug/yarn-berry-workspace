@@ -1,1 +1,0 @@
-export { combineClass } from './string';

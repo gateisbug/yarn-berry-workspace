@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback, useEffect, useRef, useState } from 'react';
 import styles from './style.module.css';
-import { combineClass } from '@util';
+import { combineClass } from '@untitled/util';
 import { TextareaProps } from './types';
 
 export default function Textarea({

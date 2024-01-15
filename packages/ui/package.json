@@ -13,7 +13,7 @@
     "watch": "rollup -c -w --bundleConfigAsCjs"
   },
   "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -54,6 +54,7 @@
     "postcss-cli": "^10.1.0",
     "postcss-preset-env": "^9.3.0",
     "rollup": "^4.3.0",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-swc3": "^0.10.3",
     "tslib": "^2.6.2",

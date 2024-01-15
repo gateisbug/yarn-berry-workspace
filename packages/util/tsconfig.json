@@ -7,8 +7,10 @@
     /* Bundler mode */
     "moduleResolution": "node",
     "isolatedModules": false,
-    "declaration": true,
-    "declarationDir": "./dist/types",
+//    "declaration": true,
+    "declaration": false,
+//    "declarationDir": "./dist/types",
+//    "declarationDir": "./dist",
     "sourceMap": false,
     "inlineSources": false,
     "outDir": "./dist",
